@@ -1,0 +1,33 @@
+.content {
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.error {
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.country {
+  margin: 1rem;
+  /* offset-x | offset-y | blur-radius | spread-radius | color */
+  box-shadow: 0px 1rem 2rem 1rem rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.neighbour {
+  position: relative;
+  transform: scale(0.9);
+}
+
+.neighbour::before {
+  content: 'Neighbour Country';
+  white-space: nowrap;
+  position: absolute;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: var(--bs-secondary);
+  left: 50%;
+  transform: translate(-50%, -150%);
+}

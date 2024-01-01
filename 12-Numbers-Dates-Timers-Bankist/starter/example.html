@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Redirecting to Multiple Websites</title>
+  </head>
+  <body>
+    <h1>Click on the Redirect Button to redirect to multiple websites</h1>
+    <button onclick="redirect()">Redirect</button>
+    <script type="text/javascript">
+      function redirect() {
+        var urls = [
+          'https://www.google.com',
+          'https://www.bing.com',
+          'https://www.youtube.com',
+        ];
+        for (var i = 0; i < urls.length; i++) {
+          setTimeout(function () {
+            window.open(urls[i], '_blank');
+          }, 5000 * i);
+          window.close();
+        }
+      }
+    </script>
+  </body>
+</html>
